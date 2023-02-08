@@ -1,0 +1,5 @@
+wheel
+fastapi
+uvicorn[standard]
+pymongo
+motor
