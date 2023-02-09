@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    command: uvicorn users_api.main:app --host ${APP_HOST} --port ${APP_PORT}
+    environment:
+        APP_HOST: ${APP_HOST}
+        APP_PORT: ${APP_PORT}
+    volumes:
+      - ${PWD}/../../:/workspace
+    ports:
+      - ${APP_PORT}:${APP_PORT}
+    env_file:
+      - '../.env'
+    depends_on:
+      - mongodb
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      MONGO_HOST: ${MONGO_HOST}
+      MONGO_PORT: ${MONGO_PORT}
+      MONGO_DATABASE: ${MONGO_DATABASE}
+    ports:
+      - ${MONGO_PORT}:${MONGO_PORT}
+    volumes:
+      - "mongodb-data:/data/db"
+    env_file:
+      - '../.env'
+volumes:
+  mongodb-data: {}

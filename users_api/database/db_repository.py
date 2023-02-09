@@ -1,4 +1,4 @@
-from users_crud.api.utils import parse_db_response
+from users_api.api.utils import parse_db_response
 from .connection import MongodbConnection
 from .exceptions import (
     DataBaseError,

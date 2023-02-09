@@ -1,4 +1,4 @@
-from users_crud.api.users.domain.users_repository import UsersRepository
+from users_api.api.users.domain.users_repository import UsersRepository
 
 
 class UsersHandler:

@@ -1,4 +1,4 @@
-from users_crud.database.db_repository import DatabaseRepository
+from users_api.database.db_repository import DatabaseRepository
 
 
 class UsersRepository(DatabaseRepository):

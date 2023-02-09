@@ -1,5 +1,4 @@
-# from users_crud.api.users.infra.users_routes import router as users_router
-from users_crud.api.users.infra.users_routes import router as users_router
+from users_api.api.users.infra.users_routes import router as users_router
 from fastapi import FastAPI
 
 

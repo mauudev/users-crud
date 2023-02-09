@@ -1,6 +1,6 @@
-from users_crud.api.users.application.users_handler import UsersHandler
-from users_crud.api.users.domain.schema import UserModel, UserResponseModel
-from users_crud.api.shared import Logger
+from users_api.api.users.application.users_handler import UsersHandler
+from users_api.api.users.domain.schema import UserModel, UserResponseModel
+from users_api.api.shared import Logger
 from fastapi import APIRouter, HTTPException
 from fastapi.encoders import jsonable_encoder
 from typing import List, Union
