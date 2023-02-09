@@ -4,7 +4,8 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    command: uvicorn users_api.main:app --host ${APP_HOST} --port ${APP_PORT}
+    # command: uvicorn users_api.main:app --host ${APP_HOST} --port ${APP_PORT}
+    # command: sh -c echo ${LS}
     environment:
         APP_HOST: ${APP_HOST}
         APP_PORT: ${APP_PORT}
